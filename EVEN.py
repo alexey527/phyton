@@ -5,8 +5,17 @@ def EVEN(k):
     else:
         return 0
 
-a = int(input("введите число = "))
-print(EVEN(a))
+n = int(input("введите количество чисел массива"))
+mas = []
+for i in range(n):
+    x = int(input())
+    mas.append(x)
 
 
-
+otv = 0
+for i in range(n):
+    s = EVEN(mas[i])
+    if s == True:
+        otv += 1
+print(otv)
+    
