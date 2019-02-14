@@ -10,16 +10,20 @@ try:
     for i in range(n):
         x = int(input("введите элемент массива"))
         mas.append(x)
-    mas.insert(2, 22)
+    
     print(mas)
     m = int(input("введите добавляемый элемент"))
     h = int(input("введите позицию добавляемого элемента"))
-    mas.append(0)
-    print(mas)
+    if h > n or h < 1:
+        print("ошибочка вышла!")
+    else: 
+        mas.append(0)
+        print(mas)
 
-    for i in range(n, h -1,  -1):
-        mas[i] = mas[i -1]
-    mas[h -1] = m
-    print(mas)
+        for i in range(n, h -1,  -1):
+            mas[i] = mas[i -1]
+        mas[h -1] = m
+        print(mas)
 except ValueError:
     print("будь внимательнее")
+ 
